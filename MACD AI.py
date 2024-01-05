@@ -100,7 +100,7 @@ else:
     # Plot the predicted close prices for the next 30 days
     axs[0].plot(predictions_df.index, predictions_df['Close'], color='green' if predictions_df['Close'][-1] >= last_year['Close'][-1] else 'red', label='Predicted')
     axs[0].plot(last_year.index, last_year['Close'], color='blue', label='Actual')
-    axs[0].set_title(stock_ticker + " MACD Price Prediction")
+    axs[0].set_title(stock_ticker.upper() + " MACD Price Prediction")
     axs[0].set_xticks([])
     axs[0].legend(loc='upper right')
 
